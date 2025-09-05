@@ -1,0 +1,219 @@
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --color-primary-red: hsl(4, 100%, 67%);
+    --color-neutral-blue-800: hsl(234, 29%, 20%);
+    --color-neutral-blue-700: hsl(235, 18%, 26%);
+    --color-neutral-grey: hsl(0, 0%, 58%);
+    --color-neutral-white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-family: 'Roboto Regular', sans-serif;
+}
+
+body {
+    background-color: var(--color-neutral-blue-800);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background-color: var(--color-neutral-white);
+    overflow: hidden;
+    border-radius: 36px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+    height: 60%;
+    aspect-ratio: 1.4/1;
+    padding: 1.25rem;
+}
+
+form .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+    width: 100%;
+}
+
+form picture,
+form picture img {
+    height: 100%;
+    width: auto;
+    box-sizing: border-box;
+    border-radius: 16px;
+    aspect-ratio: 1 / 1.48;
+}
+
+form h1 {
+    font-size: 3.5rem;
+    color: var(--color-neutral-blue-800);
+    font-weight: bold;
+    line-height: 100%;
+    letter-spacing: 0;
+}
+
+form p {
+    font-size: 1em;
+    color: var(--color-neutral-blue-800);
+    line-height: 150%;
+    letter-spacing: 0;
+}
+
+form ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    li {
+        font-size: 1em;
+        letter-spacing: 0;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        color: var(--color-neutral-blue-800);
+    }
+
+    li::before {
+        content: url('./assets/images/icon-list.svg');
+    }
+}
+
+form label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--color-neutral-blue-800);
+    margin-bottom: 0.5rem;
+    line-height: 150%;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+
+form input[type="email"] {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--color-neutral-blue-800);
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    font-size: 1em;
+    color: var(--color-neutral-blue-800);
+    margin-bottom: 1.5rem;
+}
+
+form button {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background-color: var(--color-neutral-blue-800);
+    color: var(--color-neutral-white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 150%;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 375px) {
+    form {
+        flex-direction: column-reverse;
+        height: auto;
+        aspect-ratio: auto;
+        justify-content: space-around;
+        padding: 0;
+        gap: 0rem;
+        border-radius: 0;
+        height: 100%;
+    }
+
+    form picture,
+    form picture img {
+        display: block;
+        object-fit: cover;
+        max-height: min(284px, 30vh);
+        width: 100%;
+        height: auto;
+        aspect-ratio: auto;
+
+    }
+
+    form .content {
+        gap: 0;
+        box-sizing: border-box;
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+    }
+
+    form h1 {
+        font-size: 2.25rem;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 1024px) {
+    form {
+        flex-direction: column-reverse;
+        height: auto;
+        aspect-ratio: auto;
+        justify-content: space-around;
+        padding: 2.5rem;
+        gap: 2.5rem;
+        border-radius: 36px;
+        width: min(608px, 100vw);
+        height: min(878px, 100vh);
+    }
+
+    form picture,
+    form picture img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: auto;
+    }
+
+    form .content {
+        gap: 0;
+        box-sizing: border-box;
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+        height: 100%;
+    }
+
+    form h1 {
+        font-size: 3rem;
+    }
+}
