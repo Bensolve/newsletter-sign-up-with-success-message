@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./dialog_styless.css">
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
 </head>
@@ -32,14 +32,21 @@
         <button type="submit">Subscribe to monthly newsletter</button>
       </div>
     </div>
-    <!-- <img src="./assets/images/illustration-sign-up-desktop.svg" alt="success icon"> -->
 
     <picture>
-  <source srcset="assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1025px)">
-  <source srcset="assets/images/illustration-sign-up-tablet.svg" media="(min-width: 376px) and (max-width: 1024px)">
+      <source srcset="assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1025px)">
+      <source srcset="assets/images/illustration-sign-up-tablet.svg" media="(min-width: 376px) and (max-width: 1024px)">
       <img src="assets/images/illustration-sign-up-mobile.svg" alt="Sign up illustration">
     </picture>
   </form>
+
+  <dialog>
+    <img src="assets/images/icon-success.svg" alt="Success icon">
+    <h1>Thanks for subscribing!</h1>
+    <p id="confirmation-message">A confirmation email has been sent to <strong>[email]</strong>. Please
+      open it and click the button inside to confirm your subscription.</p>
+    <button id="dismiss-button">Dismiss message</button>
+  </dialog>
 
 </body>
 

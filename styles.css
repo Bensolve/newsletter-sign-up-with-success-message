@@ -14,6 +14,7 @@
 
 :root {
     --color-primary-red: hsl(4, 100%, 67%);
+    --color-primary-pink: #FF527B;
     --color-neutral-blue-800: hsl(234, 29%, 20%);
     --color-neutral-blue-700: hsl(235, 18%, 26%);
     --color-neutral-grey: hsl(0, 0%, 58%);
@@ -50,6 +51,7 @@ form {
     height: 60%;
     aspect-ratio: 1.4/1;
     padding: 1.25rem;
+    box-shadow: 0px 12px 60px rgba(0, 0, 0, 0.25);
 }
 
 form .content {
@@ -141,6 +143,11 @@ form button {
     font-weight: bold;
     line-height: 150%;
     box-sizing: border-box;
+}
+
+form button:hover {
+    background: linear-gradient(90deg, var(--color-primary-red), var(--color-primary-pink));
+    cursor: pointer;
 }
 
 @media screen and (max-width: 375px) {
