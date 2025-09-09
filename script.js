@@ -3,7 +3,6 @@ console.log('Script loaded');
 const dialog = document.getElementById('success-dialog');
 dialog.querySelector("#dismiss-button").addEventListener('click', function () {
     emailInput.value = "";
-    subscriptionForm.reset();
     subscriptionForm.style.visibility = 'visible';
     hideDialog();
 });
