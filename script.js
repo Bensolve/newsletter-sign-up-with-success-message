@@ -11,6 +11,8 @@ const subscriptionForm = document.getElementById('subscription-form');
 const submitButton = document.getElementById('submit-button');
 const emailInput = document.getElementById('email');
 const errorMessage = document.getElementById('error-message');
+const confirmationMessage = dialog.querySelector("#confirmation-message");
+const messageTemplate = confirmationMessage.innerHTML;
 
 emailInput.addEventListener('input', function () {
     emailInput.classList.remove('input-error');
@@ -38,9 +40,9 @@ function validateEmail(email) {
 }
 
 function showDialog(email) {
-    const confirmationMessage = dialog.querySelector("#confirmation-message");
-    const message = confirmationMessage.innerHTML.replace("[email]", `${email}`);
-    confirmationMessage.innerHTML = message;
+  
+   const message = messageTemplate.replace("[email]", `${email}`);
+   confirmationMessage.innerHTML = message;
     
     dialog.showModal();
 }
